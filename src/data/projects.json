@@ -3,21 +3,21 @@
         "id": 1,
         "name": "DeerAle",
         "description": "Descripcion de DeerAle",
-        "image": "img1.png",
+        "image": "img01.png",
         "link": "urlPage1"
     },
     {
         "id": 2,
         "name": "Mister T",
         "description": "Descripcion de Mister T",
-        "image": "img2.png",
+        "image": "img02.png",
         "link": "urlPage2"
     },
     {
         "id": 3,
         "name": "CraftCol",
         "description": "Descripcion de CraftCol",
-        "image": "img3.png",
+        "image": "img03.png",
         "link": "urlPage3"
     }
 ]

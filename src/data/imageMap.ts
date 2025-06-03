@@ -7,9 +7,15 @@ import imgJs from '../assets/techJS.png';
 import imgReact from '../assets/techReact.png';
 import imgMySql from '../assets/techMySQL.png';
 import imgPython from '../assets/techPython.png';
+import imgMongoDB from '../assets/techMongoDB.png';
+import imgLangChain from '../assets/techLangChain.png';
+import imgNodeJS from '../assets/techNodeJS.png';
+import imgDocker from '../assets/techDocker.png';
+import imgAWS from '../assets/techAWS.png';
+import imgGoogleCloud from '../assets/techGoogleCloud.png';
 
-type SliderImageKey = 'img1.png' | 'img2.png' | 'img3.png';
-type TechImageKey = 'img4.png' | 'img5.png' | 'img6.png' | 'img7.png' | 'img8.png' | 'img9.png';
+type SliderImageKey = 'img01.png' | 'img02.png' | 'img03.png';
+type TechImageKey = 'img04.png' | 'img05.png' | 'img06.png' | 'img07.png' | 'img08.png' | 'img09.png' | 'img10.png' | 'img11.png' | 'img12.png' | 'img13.png' | 'img14.png' | 'img15.png';
 
 type SliderImages = Record<SliderImageKey, string>;
 type TechImages = Record<TechImageKey, string>;
@@ -21,17 +27,23 @@ type ImageMap = {
 
 const imageMap: ImageMap = {
     slider: {
-        'img1.png': imgCardDeerAle,
-        'img2.png': imgCardMrT,
-        'img3.png': imgCardCraftCol,
+        'img01.png': imgCardDeerAle,
+        'img02.png': imgCardMrT,
+        'img03.png': imgCardCraftCol,
     },
     tech: {
-        'img4.png': imgHtml,
-        'img5.png': imgCss,
-        'img6.png': imgJs,
-        'img7.png': imgReact,
-        'img8.png': imgMySql,
-        'img9.png': imgPython,
+        'img04.png': imgHtml,
+        'img05.png': imgCss,
+        'img06.png': imgJs,
+        'img07.png': imgReact,
+        'img08.png': imgMySql,
+        'img09.png': imgPython,
+        'img10.png': imgMongoDB,
+        'img11.png': imgLangChain,
+        'img12.png': imgNodeJS,
+        'img13.png': imgDocker,
+        'img14.png': imgAWS,
+        'img15.png': imgGoogleCloud,
     },
     
 };

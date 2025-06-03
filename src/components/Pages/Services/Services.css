@@ -1,6 +1,8 @@
 .servicesContainer {
     display: grid;
     grid-template-columns: 50% 50%;
+    align-items: center;
+    place-items: center;
     width: 100%;
 }
 
@@ -10,4 +12,11 @@
     grid-template-rows: repeat(3, 1fr);
     place-items: center;
     justify-content: center;
+    justify-self: start;
+    max-width: 400px;
+}
+
+.workerContainer {
+    display: grid;
+    justify-self: end;
 }

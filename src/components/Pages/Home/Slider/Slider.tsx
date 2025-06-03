@@ -3,7 +3,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import imageMap from "../../../../data/imageMap";
 import './Slider.css';
 
-const sliderImageKeys = ['img1.png', 'img2.png', 'img3.png'] as const;
+const sliderImageKeys = ['img01.png', 'img02.png', 'img03.png'] as const;
 
 const Slider = () => {
     return (

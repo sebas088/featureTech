@@ -1,4 +1,4 @@
-export type SliderImageKey = `img1.png` | `img2.png` | `img3.png`;
+export type SliderImageKey = `img01.png` | `img02.png` | `img03.png`;
 
 export interface Project {
     id: number;
