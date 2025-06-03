@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "Daniel Camilo Muñoz Puentes",
+        "role": "IA and Back-End Developer, Founder",
+        "description": "Development of generative conversational agents focused on automating key processes and optimizing operations. Participation in systems integration, migration of conversational flows, and design of intelligent solutions based on contextual information retrieval.",
+        "linkedin": "LinkedIn"
+    },
+    {
+        "id": 2,
+        "name": "Nelson Gallego Garcia",
+        "role": "Backend and Microservices Architect, Founder",
+        "description": "Design of scalable, microservice-oriented backend architectures, ensuring efficiency and maintainability. Leads container integration and orchestration in distributed environments, optimizing performance and reliability in production.",
+        "linkedin": "LinkedIn"
+    },
+    {
+        "id": 3,
+        "name": "Juan Sebastian Becerra Sandoval",
+        "role": "Front-End Developer, Founder",
+        "description": "Design and development of intuitive and responsive interfaces with React, focusing on exceptional user experiences. Direct collaboration on the backend to ensure seamless integration and optimal solution performance.",
+        "linkedin":"LinkedIn"
+    }
+]
+

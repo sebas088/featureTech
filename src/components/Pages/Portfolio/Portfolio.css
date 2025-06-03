@@ -1,0 +1,11 @@
+.portfolioContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}

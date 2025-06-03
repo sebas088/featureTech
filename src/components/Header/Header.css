@@ -1,0 +1,28 @@
+.navContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100px 80px;
+    gap: 10px;
+    background-color: rgb(28, 100, 145)
+}
+
+.item {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    grid-row: 2;
+}
+.item:hover {
+    border-bottom: 3px solid rgb(172, 209, 221);
+}
+
+.itemLogo {
+    grid-column: 3;
+    grid-row: 1/3;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border-radius: 100%;
+}

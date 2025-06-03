@@ -1,0 +1,58 @@
+.project {
+    
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100% ;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0  4px 20px rgba(0, 0, 0, 0,1);
+    overflow: hidden;
+    transition: transform 0,3s ease, box-shadow 0,3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0,15);
+}
+
+.image {
+    max-width: 300px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.dataProject {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+}
+
+.dataProject h3 {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.dataProject p {
+    font-size: 0,95rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.dataProject a {
+    display: inline-block;
+    color: #0077ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0,3s ease;
+}
+
+.dataProject a:hover {
+    color: #0056b3;
+}
