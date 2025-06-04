@@ -1,0 +1,70 @@
+.formContainer {
+    width: 100%;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-color: #3f83f8;
+    outline: none;
+    background-color: #fff;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #3f83f8;
+    color: white;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #3366cc;
+}
+
+.successMessage {
+    text-align: center;
+    color: green;
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+}

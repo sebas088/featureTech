@@ -2,7 +2,7 @@ import { Element } from "react-scroll";
 import projectsDataRaw from '../../../data/projects.json';
 import ProjectInfo from "./ProjectInfo/ProjectInfo";
 import { Project } from "../../../interface/Project";
-import '../Portfolio/Portfolio.css';
+import './Portfolio.css';
 
 const projectsData = projectsDataRaw as Project[];
 
