@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef } from "react";
+import Logo from "../../../Logo/Logo";
 import './Form.css';
 
 const Form = () => {
@@ -11,24 +12,43 @@ const Form = () => {
     const [submitted, setSubmitted] = useState(false);
 
     const formRef = useRef(null);
-    const isInView = useInView(formRef, { once:true });
+    const isInView = useInView(formRef, { once: true });
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!email.includes('@')) {
             alert('Please enter a valid email address.');
             return;
         }
+        try {
+            const response = await fetch("https://feature-tech-production.up.railway.app/form/new", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ name, email, subject, message }),
+            });
 
-        console.log('Data sent:', { name, email, subject, message });
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
-        setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 4000);
-    };
+            if (response.status === 201) {
+                setName('');
+                setEmail('');
+                setSubject('');
+                setMessage('');
+                setSubmitted(true);
+                setTimeout(() => setSubmitted(false), 4000);
+            } else {
+                const errorText = await response.text();
+                alert(`Error: ${errorText}`);
+            }
+        } catch (err) {
+            console.error(err);
+            alert("Hubo un error al enviar el mensaje. Inténtalo más tarde.")
+        }
+
+    }
+
+
 
     return (
         <motion.div
@@ -41,6 +61,7 @@ const Form = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
             }}
         >
+            <Logo to="#" />
             <h2>Contact us:</h2>
             <form onSubmit={handleSubmit}>
                 <div className="formGroup">
@@ -83,7 +104,9 @@ const Form = () => {
                         rows={4}
                     />
                 </div>
-                <button type="submit">Send</button>
+                <div className="formGroup buttonGroup">
+                    <button type="submit">Send</button>
+                </div>
             </form>
 
             <AnimatePresence>

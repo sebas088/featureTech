@@ -1,10 +1,11 @@
 .formContainer {
     width: 100%;
-    margin: 3rem auto;
-    padding: 2rem;
+    margin: 0 auto;
+    padding: 4rem;
     background-color: #ffffff;
     border-radius: 1rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .formContainer h2 {
@@ -19,7 +20,6 @@
 }
 
 .formGroup label {
-    display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
     color: #444;
@@ -42,10 +42,15 @@
     outline: none;
     background-color: #fff;
 }
+.formGroup.buttonGroup{
+    display: flex;
+    justify-content: center;
+}
 
 button[type="submit"] {
     display: block;
-    width: 100%;
+    width: 80%;
+    margin: auto 0;
     background-color: #3f83f8;
     color: white;
     padding: 0.75rem;
@@ -55,6 +60,7 @@ button[type="submit"] {
     border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    
 }
 
 button[type="submit"]:hover {
