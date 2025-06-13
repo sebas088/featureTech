@@ -13,6 +13,7 @@ const Form = () => {
 
     const formRef = useRef(null);
     const isInView = useInView(formRef, { once: true });
+    const apiUrl = import.meta.env.VITE_API_URL;
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -22,7 +23,7 @@ const Form = () => {
             return;
         }
         try {
-            const response = await fetch("https://feature-tech-production.up.railway.app/form/new", {
+            const response = await fetch(apiUrl, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
