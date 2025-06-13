@@ -23,7 +23,7 @@ const Form = () => {
             return;
         }
         try {
-            const response = await fetch("https://feature-tech-production.up.railway.app/form", {
+            const response = await fetch("https://feature-tech-production.up.railway.app/form/new", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
