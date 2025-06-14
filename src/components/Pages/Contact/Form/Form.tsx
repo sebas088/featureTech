@@ -13,6 +13,8 @@ const Form = () => {
 
     const formRef = useRef(null);
     const isInView = useInView(formRef, { once: true });
+
+    const API_URL = import.meta.env.VITE_API_URL;
     
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -23,7 +25,8 @@ const Form = () => {
             return;
         }
         try {
-            const response = await fetch("https://feature-tech-production.up.railway.app/form/new", {
+            console.log("=========", API_URL);
+            const response = await fetch(`${API_URL}/form/new`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -40,6 +43,8 @@ const Form = () => {
                 setTimeout(() => setSubmitted(false), 4000);
             } else {
                 const errorText = await response.text();
+                console.log("Error status:", response.status);
+                console.log("Respuesta del backend:", errorText);
                 alert(`Error: ${errorText}`);
             }
         } catch (err) {
