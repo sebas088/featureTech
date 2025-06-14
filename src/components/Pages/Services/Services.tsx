@@ -14,8 +14,8 @@ const Services = () => {
   const workerRef = useRef(null);
   const techRef = useRef(null);
 
-  const isWorkerInView = useInView(workerRef, {once: false});
-  const isTechInView = useInView(techRef, { once: false});
+  const isWorkerInView = useInView(workerRef, {once: true});
+  const isTechInView = useInView(techRef, { once: true});
 
   return (
     <Element name="services">
@@ -43,6 +43,7 @@ const Services = () => {
             <TechImage key={index} src={imageMap.tech[key]} />
           ))}
         </motion.div>
+
       </div>
     </Element>
   )
