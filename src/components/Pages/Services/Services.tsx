@@ -14,8 +14,8 @@ const Services = () => {
   const workerRef = useRef(null);
   const techRef = useRef(null);
 
-  const isWorkerInView = useInView(workerRef, {once: true});
-  const isTechInView = useInView(techRef, { once: true});
+  const isWorkerInView = useInView(workerRef, {once: false});
+  const isTechInView = useInView(techRef, { once: false});
 
   return (
     <Element name="services">
