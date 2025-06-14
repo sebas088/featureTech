@@ -7,7 +7,7 @@ interface TechImageProps {
 const TechImage: React.FC<TechImageProps> = ({ src }) => {
   return (
     <div className="imgTechContainer">
-        <img src={src} className='imgTech'></img>
+        <img src={src} className='imgTech' loading='lazy'></img>
     </div>
   )
 }

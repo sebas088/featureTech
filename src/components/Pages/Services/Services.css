@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
     place-items: center;
     justify-content: center;
     justify-self: start;
@@ -19,4 +20,25 @@
 .workerContainer {
     display: grid;
     justify-self: end;
+    gap: 1.5rem;
+}
+
+.workerContainer > *, .techContainer > * {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .servicesContainer {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    .techContainer {
+        justify-self: center;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .workerContainer {
+        justify-self: center;
+    }
 }
