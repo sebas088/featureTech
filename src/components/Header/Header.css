@@ -1,9 +1,29 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1000;
+    transition:  all 0.3s ease;
+    backdrop-filter: blur(10px);
+    background-color: rgba(28, 100, 145, 0.9);
+    box-shadow:  0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .navContainer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 100px 80px;
-    gap: 10px;
-    background-color: rgb(28, 100, 145)
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: rgb(28, 100, 145);
+    transition: all 0.3s ease;
+}
+
+.navScrolled {
+    grid-template-rows: 0px 60px;
 }
 
 .item {
@@ -11,11 +31,29 @@
     text-decoration: none;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-self: end;
     grid-row: 2;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.6s ease;
 }
-.item:hover {
-    border-bottom: 3px solid rgb(172, 209, 221);
+
+.item::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(172, 209, 221);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.6s ease;
+}
+
+.item:hover::after {
+    width: 100%;
+    border-bottom: 1px solid rgb(172, 209, 221);
 }
 
 .itemLogo {
@@ -25,4 +63,39 @@
     justify-items: center;
     align-items: center;
     border-radius: 100%;
+    position: relative;
+}
+
+.itemLogo > * {
+    position: absolute;
+}
+
+.brandName {
+    font-size: 1.4rem;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.brandName span {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.slide-up {
+    transform: translateY(0);
 }

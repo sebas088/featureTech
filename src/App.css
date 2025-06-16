@@ -5,6 +5,10 @@ html, body {
   width: 100%;
 }
 
+main {
+  transition: padding-top 0.3s ease;
+}
+
 #root {
   height: 100%;
   width: 100%;

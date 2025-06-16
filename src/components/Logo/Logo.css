@@ -1,10 +1,36 @@
-.itemLogo{
+.itemLogo {
+    text-decoration: none;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.logo{
-    width: 150px;
-    height: 150px;
+.logoContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.6rem;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
     border-radius: 99px;
+    object-fit: contain;
+}
+
+.companyName {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+}
+
+.dns {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: white;
+    text-align: center;
 }

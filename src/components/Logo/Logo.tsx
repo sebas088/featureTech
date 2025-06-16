@@ -9,7 +9,12 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({to}) => {
   return (
     <Link to={to} className="itemLogo">
-      <img src={logo} className="logo"></img>
+      <div className="logoContent">
+        <img src={logo} alt="Feature Tech logo" className="logo"></img>
+        <span className="companyName">Feature Tech<br />
+          <span className="dns">DNS</span>
+        </span>
+      </div>
     </Link>
   )
 }
