@@ -1,3 +1,4 @@
+/* Enlace que envuelve todo el logo. Se centra sin subrayado */
 .itemLogo {
     text-decoration: none;
     display: flex;
@@ -5,20 +6,25 @@
     justify-content: center;
 }
 
+/* Contenedor del logo y el nombre, apilados verticalmente */
 .logoContent {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /* Ajuste fino de la separacion respecto a otros elementos */
     margin-top: 0.6rem;
 }
 
+/* Imagen circular del logo, bien contenida y sin deformarse */
 .logo {
     width: 130px;
     height: 130px;
     border-radius: 99px;
-    object-fit: contain;
+    object-fit: contain; /* Asegura que el logo no se estire */
 }
 
+/* Texto de la empresa debajo del logo*/
 .companyName {
     margin-top: 0.6rem;
     font-size: 0.9rem;
@@ -27,6 +33,7 @@
     text-align: center;
 }
 
+/*  DNS como subtitulo separao visualmente */
 .dns {
     display: block;
     font-size: 0.8rem;

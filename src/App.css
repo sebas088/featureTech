@@ -1,3 +1,4 @@
+/* Elimina margenes/paddig por defecto y ocupa todo el viewport */
 html, body {
   margin: 0;
   padding: 0;
@@ -5,10 +6,12 @@ html, body {
   width: 100%;
 }
 
+/* Trancicion suave cuadno se ajusta el padding-top del main dinamicamente  */
 main {
   transition: padding-top 0.3s ease;
 }
 
+/* Asegura que el contenedor raiz (donde React monta la app) tambien ocupe todo el espacio */
 #root {
   height: 100%;
   width: 100%;

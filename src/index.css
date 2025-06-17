@@ -1,26 +1,35 @@
 :root {
+  /* Fuente principal para toda la app (definida en index.html via Google Fonts) */
   font-family: 'Lato', sans-serif;
+
+  /* Espaciado entre lineas para mejorar la legibilidad del texto */
   line-height: 1.5;
+
+  /* Peso base del texto */
   font-weight: 400;
+
+  /* Hace que el box model incluya padding y border en el tamaño total */
   box-sizing: border-box;
   
-
-  font-synthesis: none;
+  /* Mejora la calidad visual del texto en distintos navegadores */
+  font-synthesis: none; /* Evita que el navegador "falsifique" negritas o italicas */
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; /* Nejora renderizado en WebKit (Chrome, Safari) */
+  -moz-osx-font-smoothing: grayscale; /* Mejora renderizado en macOs */
 }
 
-
-
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: white;
+  margin: 0; /* Elimina margenes por defecto del navegador */
+
+  display: flex; /* Permite centrar el contenido con flexbox */
+  place-items: center; /* Centra horizontal y verticalmente (equivale a align + justify center) */
+  min-width: 320px; /* Ancho minimo para evitar layouts rotos en moviles pequeños */
+  min-height: 100vh; /* Garantiza que el body ocupe toda la altura de la pantalla */
+  background-color: white; /* Color de fondo base */
   
 }
 
