@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef } from "react";
-import Logo from "../../../Logo/Logo";
+// import Logo from "../../../Logo/Logo";
 import './Form.css';
 
 const Form = () => {
