@@ -26,7 +26,7 @@ const Form = () => {
         }
         try {
             console.log("=========", API_URL);
-            const response = await fetch(`h${API_URL}`, {
+            const response = await fetch(`${API_URL}/form/new`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
