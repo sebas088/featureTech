@@ -2,21 +2,21 @@
     {
         "id": 1,
         "name": "DeerAle",
-        "description": "Descripcion de DeerAle",
+        "description": "DeerAle es un ecommerce especializado en la venta de vapeadores, accesorios y artículos relacionados. Ofrece una amplia gama de productos de alta calidad para entusiastas del vapeo, con un enfoque en la experiencia del usuario, seguridad y cumplimiento de normativas.",
         "image": "img01.png",
         "link": "urlPage1"
     },
     {
         "id": 2,
         "name": "Mister T",
-        "description": "Descripcion de Mister T",
+        "description": "Mister T es una tienda online enfocada en la venta de calzado deportivo y casual para hombre y mujer. Su catálogo incluye las últimas tendencias en tenis, ofreciendo comodidad, estilo y versatilidad para todos los gustos y edades.",
         "image": "img02.png",
         "link": "urlPage2"
     },
     {
         "id": 3,
         "name": "CraftCol",
-        "description": "Descripcion de CraftCol",
+        "description": "CraftCol es un ecommerce dedicado a la promoción y venta de bolsos y artículos artesanales colombianos. Cada pieza refleja el talento y la tradición de los artesanos locales, ofreciendo productos auténticos y únicos que conectan la cultura colombiana con el mercado global.",
         "image": "img03.png",
         "link": "urlPage3"
     }
