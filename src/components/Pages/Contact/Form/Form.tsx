@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef } from "react";
-// import Logo from "../../../Logo/Logo";
+import Logo from "../../../Logo/Logo";
 import './Form.css';
 
 const Form = () => {
@@ -67,7 +67,7 @@ const Form = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
             }}
         >
-            {/* <Logo to="#" /> */}
+            <Logo to="#" />
             <h2>Contact us:</h2>
             <form onSubmit={handleSubmit}>
                 <div className="formGroup">
