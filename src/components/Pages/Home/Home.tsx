@@ -1,17 +1,22 @@
-import { Element } from "react-scroll";
+import { Element } from "react-scroll"; // Marca la seccion como "ancla"
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Slider from "./Slider/Slider";
 import './Home.css';
 
 const Home = () => {
+  // Ref para detectar cuando el texto de introduccion entra en la vista
   const introRef = useRef(null);
   const isInView = useInView(introRef, { once: true });
 
   return (
+    // Define el "ancla" para el boton de navegacion que lleva a la seccion Home
     <Element name="home">
       <div>
+        {/* Carrusel de imagenes o contenido destacado */}
         <Slider />
+
+        {/* Animacion de aparicion del texto al hacer scroll */}
         <motion.div
           ref={introRef}
           className="introText"
@@ -28,4 +33,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

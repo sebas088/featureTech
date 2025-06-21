@@ -1,5 +1,6 @@
+/* Contenedor que centra el formulario de contacto en la seccion */
 .contactContainer {
     display: grid;
-    place-items: center;
-    height: 300px;
+    place-items: center; /* Centra horizontal y verticalmente */
+    height: 300px; /* Altura fija para asegurar espacio visual suficiente */
 }

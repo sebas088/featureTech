@@ -2,12 +2,16 @@
     width: 100%;
     margin: 0 auto;
     padding: 4rem;
+
     background-color: #ffffff;
     border-radius: 1rem;
+
+    /* Sombra sutil para separar visualmente del fondo */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
+/* Tiene centrado del formulario */
 .formContainer h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -15,61 +19,79 @@
     color: #333;
 }
 
+/* Separacion entre campos del formulario */
 .formGroup {
     margin-bottom: 1.5rem;
 }
 
+/* Estilo de las etiquetas de los campos */
 .formGroup label {
     margin-bottom: 0.5rem;
     font-weight: 600;
     color: #444;
 }
 
+/* Campos de texto (input y textarea) con estilo coherente y transiciones */
 .formGroup input,
 .formGroup textarea {
     width: 100%;
     padding: 0.75rem;
+
     border: 1px solid #ccc;
     border-radius: 0.5rem;
+
     font-size: 1rem;
     background-color: #f9f9f9;
+
+    /* Hace que el borde cambie suavemente al enfocar */
     transition: border 0.3s ease;
 }
 
+/* Cambia el borde y fondo al enfocar para indicar interactividad */
 .formGroup input:focus,
 .formGroup textarea:focus {
     border-color: #3f83f8;
     outline: none;
     background-color: #fff;
 }
+
+/* Agrupa el boton y lo centra horizontalmente */
 .formGroup.buttonGroup{
     display: flex;
     justify-content: center;
 }
 
+/* Boton de envio: estilo primario y responsive */
 button[type="submit"] {
     display: block;
     width: 80%;
+
     margin: auto 0;
+
     background-color: #3f83f8;
     color: white;
+
     padding: 0.75rem;
     font-size: 1rem;
     font-weight: 600;
+
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
+
+    /* Efecto suave al pasar el mouse */
     transition: background-color 0.3s ease;
-    
 }
 
+/* Color mas oscuro en hover para indicar interactividad */
 button[type="submit"]:hover {
     background-color: #3366cc;
 }
 
+/* Mensaje de exito despues de enviar el formulario */
 .successMessage {
     text-align: center;
-    color: green;
+    color: green; 
     margin-top: 1rem;
     font-weight: 500;
     font-size: 1rem;

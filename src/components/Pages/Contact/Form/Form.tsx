@@ -5,21 +5,27 @@ import { useRef } from "react";
 import './Form.css';
 
 const Form = () => {
+    // Estados locales para los campos del formulario
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+
+    // Estados para controlar la animacion de mensaje enviado
     const [submitted, setSubmitted] = useState(false);
 
+    // Ref para detectar cuadno el formulario entra en el viewport
     const formRef = useRef(null);
     const isInView = useInView(formRef, { once: true });
 
+    // URL base de la API (se toma desde variables de entorno)
     const API_URL = import.meta.env.VITE_API_URL;
     
-
+    // Maneja el envio del formulario (POST al backend)
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        // Validacion basica de email
         if (!email.includes('@')) {
             alert('Please enter a valid email address.');
             return;
@@ -35,13 +41,17 @@ const Form = () => {
             });
 
             if (response.status === 201) {
+                // Si el backend responde con exito: limpiamos el formulario
                 setName('');
                 setEmail('');
                 setSubject('');
                 setMessage('');
                 setSubmitted(true);
+
+                // Ocultamos el mensaje de exito despues de 4 segundos
                 setTimeout(() => setSubmitted(false), 4000);
             } else {
+                // Si ocurre un error: mostramos el mensaje del backend
                 const errorText = await response.text();
                 console.log("Error status:", response.status);
                 console.log("Respuesta del backend:", errorText);
@@ -53,8 +63,6 @@ const Form = () => {
         }
 
     }
-
-
 
     return (
         <motion.div
@@ -116,6 +124,7 @@ const Form = () => {
             </form>
 
             <AnimatePresence>
+                {/* Mensaje de exito que aparece temporalmente */}
                 {submitted && (
                     <motion.p
                         className="successMessage"

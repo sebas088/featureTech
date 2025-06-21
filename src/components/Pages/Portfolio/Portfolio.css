@@ -1,11 +1,15 @@
+/* Contenedor de los proyectos , centrado y con diseño flexible */
 .portfolioContainer {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Limita el ancho para mantener una buena legibilidad en pantallas grandes */
+    margin: 0 auto; /* Centrado horizontal */
+
     padding: 40px 20px;
+
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 32px;
-    background-color: #f9f9f9;
-    overflow: hidden;
+    flex-wrap: wrap; /* Permite que los proyectos se acomoden en multiples filas si es necesario */
+    justify-content: center; /* Centra las tarjetas en cada fila */
+    gap: 32px; /* Espaciado uniforme entre las tarjetas */
+
+    background-color: #f9f9f9; /* Fondo suave para diferenciar la seccion */
+    overflow: hidden; /* Evita desbordes visuales si hay animaciones */
 }
