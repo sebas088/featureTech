@@ -1,36 +1,43 @@
+/* Tarjeta de presentacion para cada perfil de trabajador:
+    - Fondo blanco, bordes redondeados y sombra para destacar */
 .workerProfile {
     width: 300px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba (0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba (0,0,0,0.1); /* Sombra sutil inicial */
     padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacion suave al hacer hover */
     text-align: center;
 }
 
+/* Efecto de elevacion al pasar el mouse para dar interactividad visual */
 .workerProfile:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Aumenta la sombra */
 }
 
+/* Nombre del trabajador, tamaño y color sobrios para buen contraste */
 .workerProfile h2 {
     font-size: 1.3rem;
     color: #333;
     margin-bottom: 8px;
 }
 
+/* Rol o titulo del trabajador, menos destacado que el nombre */
 .workerProfile h4 {
     font-size: 0.95rem;
     color: #666;
     margin-bottom: 12px;
 }
 
+/* Descripcion breve del trabajador, tamaño de fuente menor y tono neutro */
 .workerProfile p {
     font-size: 0.85rem;
     color: #555;
     margin-bottom: 16px;
 }
 
+/* Estilo del enlace a LinkedIn con efecto al pasar el raton */
 .workerProfile a {
     display: inline-block;
     text-decoration: none;
@@ -39,6 +46,7 @@
     transition: color 0.3s ease;
 }
 
+/* Cambio de color al hacer hover sobre el enlace */
 .workerProfile a:hover {
     color: #0056b3;
 }

@@ -1,58 +1,71 @@
+/* Contenedor principal de cada proyecto: diseño tipo tarjeta, con grid para imagen + texto */
 .project {
-    
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 40% 60%; /* Distribuye 40% para la imagen, 60% para el contenido */
     grid-template-rows: 100% ;
     align-items: center;
     justify-items: center;
+
     width: 100%;
     background: white;
     border-radius: 12px;
+
+    /* Sombra y efecto visual */
     box-shadow: 0  4px 20px rgba(0, 0, 0, 0,1);
     overflow: hidden;
+
+    /* Animacion de hover */
     transition: transform 0,3s ease, box-shadow 0,3s ease;
 }
 
+/* Efecto al pasar el raton: eleva la tarjeta y acentua la sombra */
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0,15);
 }
 
+/* Imagen del proyecto: se adapta al espacio sin deformarse */
 .image {
     max-width: 300px;
     max-height: 150px;
     object-fit: cover;
 }
 
+/* Contenedor de los textos (titulo, descripcion y enlace) */
 .dataProject {
     display: grid;
     grid-template-rows: 20% 80%;
     justify-items: center;
     align-items: center;
     justify-content: center;
+
     width: 100%;
     padding: 16px;
 }
 
+/* Titulo del proyecto */
 .dataProject h3 {
     font-size: 1.4rem;
     color: #333;
 }
 
+/* Descripcion del proyecto */
 .dataProject p {
     font-size: 0,95rem;
     color: #666;
     margin-bottom: 12px;
 }
 
+/* Enlace del proyecto */
 .dataProject a {
     display: inline-block;
     color: #0077ff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0,3s ease;
+    transition: color 0.3s ease;
 }
 
+/* Efecto hover para el enlace */
 .dataProject a:hover {
     color: #0056b3;
 }
