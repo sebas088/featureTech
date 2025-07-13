@@ -25,7 +25,10 @@ const Home = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}        
         >
           <p>
-            En Feature Tech creamos soluciones de software escalables, eficientes y alineadas con los objetivos de negocio de nuestros clientes. Desarrollamos aplicaciones robustas potenciadas por Inteligencia Artificial, siendo una de nuestras principales especialidades los agentes conversacionales generativos. Nuestra meta es impulsar la transformación digital con tecnología útil, flexible y pensada para el crecimiento.
+            En Feature Tech creamos soluciones de software escalables, eficientes y alineadas con los objetivos de negocio de nuestros clientes.<br /><br />
+            Nos especializamos en el desarrollo de aplicaciones robustas, con un enfoque meticuloso en la experiencia de usuario web, una velocidad de respuesta impecable mediante microservicios y una infraestructura cloud moderna. Todo esto potenciado por Inteligencia Artificial, siendo una de nuestras principales fortalezas el desarrollo de agentes cognitivos.<br /><br />
+            Nuestra meta es impulsar la transformación digital con tecnología útil, flexible y diseñada para el crecimiento de las personas.<br /><br />
+            Queremos revolucionar el software en el mundo hispano y demostrar de qué estamos hechos a nivel mundial. Buscamos impactar positivamente la vida de las personas a través de soluciones de software e inteligencia artificial que sean accesibles, seguras y verdaderamente significativas.
           </p>
         </motion.div>
       </div>
