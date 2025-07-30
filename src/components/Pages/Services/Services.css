@@ -8,16 +8,6 @@
 }
 
 /* Contenedor de tecnologias: grid de 3 filas y 2 columnas (para iconos o logos) */
-.techContainer {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(3, 1fr); /* Distribuye 3 filas de igual altura */
-    gap: 1rem; /* Espacio enre elementos */
-    place-items: center;
-    justify-content: center;
-    justify-self: start;
-    max-width: 400px; /* Evita que las imagenes tecnologias ocupen demasiado espacio */
-}
 
 /* Contenedor de perfiles de trabajadores */
 .workerContainer {
@@ -38,11 +28,7 @@
         row-gap: 2rem;
     }
 
-    .techContainer {
-        justify-self: center;
-        /* Distribuye automaticamente las tecnologias en filas ajustables */
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
+    
 
     .workerContainer {
         justify-self: center; /* Centra los perfiles en vista movil */
