@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+import { motion, useInView } from "framer-motion";
 import './TechImage.css';
 
 // Define las props que recibe este componento: una sola imagen (src)
@@ -6,12 +8,24 @@ interface TechImageProps {
 }
 
 const TechImage: React.FC<TechImageProps> = ({ src }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    // Contenedor para mantener el estilo de cada imagen tecnologica
-    <div className="imgTechContainer">
-        {/* Carga de la imagen: se hace de forma perezosa para optimizar rendimiento */}
-        <img src={src} className='imgTech' loading='lazy'></img>
-    </div>
+    <motion.div
+      ref={ref}
+      className="imgTechContainer"
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
+      <img
+        src={isInView ? src : ''}
+        className="imgTech"
+        loading='lazy'
+        alt='Tecnology'
+      />
+    </motion.div>
   )
 }
 

@@ -1,52 +1,39 @@
 /* Tarjeta de presentacion para cada perfil de trabajador:
     - Fondo blanco, bordes redondeados y sombra para destacar */
 .workerProfile {
-    width: 300px;
+    width: 400px;
+    margin-top: 30px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba (0,0,0,0.1); /* Sombra sutil inicial */
     padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacion suave al hacer hover */
+    transition: transform 3s ease, box-shadow 3s ease; /* Animacion suave al hacer hover */
     text-align: center;
+    opacity: 0;
+    transform: translateY(0);
+    transition: all 1s ease;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
 }
 
-/* Efecto de elevacion al pasar el mouse para dar interactividad visual */
-.workerProfile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Aumenta la sombra */
+.workerProfile.expanded {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 800px;
+    padding: 1.5rem;
 }
 
-/* Nombre del trabajador, tamaño y color sobrios para buen contraste */
-.workerProfile h2 {
-    font-size: 1.3rem;
-    color: #333;
-    margin-bottom: 8px;
+.profileHeader {
+    transition: opacity 3s ease;
 }
 
-/* Rol o titulo del trabajador, menos destacado que el nombre */
-.workerProfile h4 {
-    font-size: 0.95rem;
-    color: #666;
-    margin-bottom: 12px;
+.profileHeader h2,
+.profileHeader p {
+    margin: 0;
 }
 
-/* Descripcion breve del trabajador, tamaño de fuente menor y tono neutro */
-.workerProfile p {
-    font-size: 0.85rem;
-    color: #555;
-    margin-bottom: 16px;
+.workerProfile.expanded .profileHeader {
+    opacity: 1;
 }
 
-/* Estilo del enlace a LinkedIn con efecto al pasar el raton */
-.workerProfile a {
-    display: inline-block;
-    text-decoration: none;
-    color: #0077ff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-/* Cambio de color al hacer hover sobre el enlace */
-.workerProfile a:hover {
-    color: #0056b3;
-}

@@ -1,36 +1,28 @@
 /* Contenedor principal de la seccion 'Services' con dos columnas (trabajadores y tecnologias) */
 .servicesContainer {
-    display: grid;
-    grid-template-columns: 50% 50%; /* Divide el espacio mitad y mitad */
-    align-items: center;
-    place-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
 }
 
-/* Contenedor de tecnologias: grid de 3 filas y 2 columnas (para iconos o logos) */
-
-/* Contenedor de perfiles de trabajadores */
-.workerContainer {
-    display: grid;
-    justify-self: end;
-    gap: 1.5rem; /* Espaciado vertical entre los perfiles */
+@media (max-width: 1200px) {
+    .servicesContainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
+/* Contenedor de tecnologias: grid de 3 filas y 2 columnas (para iconos o logos) */
+/* Contenedor de perfiles de trabajadores */
+
 
 /* Efecto de transicion suave para animaciones al entrar en pantalla */
-.workerContainer > *, .techContainer > * {
+/* .workerContainer > *, .techContainer > * {
     transition: transform 0.3s ease, opacity 0.3s ease;
-}
+} */
 
-/* Estilos responsivos para moviles o pantallas pequeños */
-@media (max-width: 768px) {
-    .servicesContainer {
-        grid-template-columns: 1fr; /* Una sola columna (stacked layout) */
-        row-gap: 2rem;
-    }
-
-    
-
-    .workerContainer {
-        justify-self: center; /* Centra los perfiles en vista movil */
-    }
-}

@@ -1,27 +1,39 @@
 <!doctype html>
 <!-- Declaramos el tipo de documento para asegurar compatibilidad -->
 <html lang="en">
-  <head>
-    <!-- Codificacion de caracteres: permite caracteres especiales como tildes -->
-    <meta charset="UTF-8" />
 
-    <!-- Icono que aparece en la pestaña del navegador -->
-    <link rel="icon" type="image/svg+xml" href="./src/assets/logoFeatureTech.svg" />
+<head>
+  <!-- Codificacion de caracteres: permite caracteres especiales como tildes -->
+  <meta charset="UTF-8" />
 
-    <!-- Hace que el sitio sea responsive en dispositivos moviles -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Icono que aparece en la pestaña del navegador -->
+  <link rel="icon" type="image/svg+xml" href="./src/assets/logoFeatureTech.svg" />
 
-    <!-- Titulo que aparece en la pestaña del navegador -->
-    <title>Feature Tech DNS</title>
+  <!-- Hace que el sitio sea responsive en dispositivos moviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FENTE personalizada desde Google Fonts -->
-    
-  </head>
-  <body>
-    <!-- Punto de montaje de React: aqui se inyecta toda la app -->
-    <div id="root"></div>
+  <!-- Titulo que aparece en la pestaña del navegador -->
+  <title>Feature Tech DNS</title>
 
-    <!-- Archivo JavaScript principal que arranca la app -->
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- FENTE personalizada desde Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    h1 {
+      font-weight: 700; /* Usa la variante negrita */
+    }
+  </style>
+</head>
+
+<body>
+  
+  <!-- Punto de montaje de React: aqui se inyecta toda la app -->
+  <div id="root"></div>
+
+  <!-- Archivo JavaScript principal que arranca la app -->
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
