@@ -1,20 +1,59 @@
 /* Tarjeta de presentacion para cada perfil de trabajador:
     - Fondo blanco, bordes redondeados y sombra para destacar */
-.workerProfile {
-    width: 400px;
+
+/* Contenedor general de la tarjeta */
+.workerContainer {
+    display: grid;
+    margin: 2rem;
+    border: solid 0.3rem transparent;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 24px rgba (0, 0, 0, 0.1);
+    background: white;
+    transform: translateY(0);
+    transition: all 1s ease-in-out;
+}
+
+.workerContainer:hover {
+    border: solid 1rem rgb(172, 207, 236);
+}
+
+
+/* Encabezado */
+.profileHeader {
+    transition: opacity 3s ease;
+    text-align: center;
     margin-top: 30px;
+}
+
+.profileHeader h2{
+    margin: 0;
+}
+.profileHeader p {
+    margin: 0;
+    text-decoration: underline;
+}
+
+.workerProfile.expanded .profileHeader {
+    opacity: 1;
+}
+
+
+/* Tarjeta del trabajador */
+.workerProfile {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 400px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba (0,0,0,0.1); /* Sombra sutil inicial */
-    padding: 20px;
-    transition: transform 3s ease, box-shadow 3s ease; /* Animacion suave al hacer hover */
     text-align: center;
     opacity: 0;
     transform: translateY(0);
-    transition: all 1s ease;
-    max-height: 0;
+    min-height: 300px;
     overflow: hidden;
     padding: 0;
+    transition: all 3s ease;
 }
 
 .workerProfile.expanded {
@@ -22,18 +61,19 @@
     transform: translateY(0);
     max-height: 800px;
     padding: 1.5rem;
+    
 }
 
-.profileHeader {
-    transition: opacity 3s ease;
+
+/* Enlace de LinkedIn */
+.workerProfile a {
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
 }
 
-.profileHeader h2,
-.profileHeader p {
-    margin: 0;
+.workerProfile a:hover {
+    color: #28c2ca;
 }
 
-.workerProfile.expanded .profileHeader {
-    opacity: 1;
-}
 

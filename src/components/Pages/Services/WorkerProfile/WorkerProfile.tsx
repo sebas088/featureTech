@@ -41,45 +41,27 @@ const WorkerProfile: React.FC<Props> = ({ worker }) => {
     if(isVisible) {
       const timer = setTimeout(() => {
         setDelayedVisible(true);
-      }, 900);
+      }, 700);
 
       return () => clearTimeout(timer);
     }
   }, [isVisible]);
 
   return (
-    <div
-      ref={profileRef}
-      className={`workerProfile ${delayedVisible ? 'expanded' : ''}`}
-    >
+    <div className="workerContainer">
       <div className="profileHeader">
         <h2>{worker.name}</h2>
         <p>{worker.role}</p>
       </div>
-      <div>
+      <div ref={profileRef}
+        className={`workerProfile ${delayedVisible ? 'expanded' : ''}`}
+      >
         <p>{worker.description}</p>
         <a href={worker.linkedin} target="_blank" rel="noopener noreferrer">
           Ver perfil en LinkedIn
         </a>
       </div>
     </div>
-    // Contenedor del perfil de un trabajador
-    // <div className="workerProfile">
-    //   {/* Nombre del trabajador */}
-    //   <h2>{worker.name}</h2>
-
-    //   {/* Cargo o rol del trabajador */}
-    //   <h4>{worker.role}</h4>
-
-    //   {/* Breve descripcion de experiencia o responsabilidades */}
-    //   <p>{worker.description}</p>
-
-    //   {/* Enlace externo a su perfil de LinkedIn (se abre en nueva pestaña de forma segura) */}
-    //   <a href={worker.linkedin} target="_blank" rel="noopener noreferrer">
-    //     Ver perfil en LinkedIn
-    //   </a>
-
-    // </div>
   );
 }
 export default WorkerProfile
