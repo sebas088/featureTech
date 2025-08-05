@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
     /* Ajuste fino de la separacion respecto a otros elementos */
     margin-top: 0.6rem;
 }
@@ -20,23 +20,23 @@
 .logo {
     width: 130px;
     height: 130px;
-    border-radius: 99px;
     object-fit: contain; /* Asegura que el logo no se estire */
 }
 
 /* Texto de la empresa debajo del logo*/
 .companyName {
     margin-top: 0.6rem;
-    font-size: 0.9rem;
+    font-size: 2rem;
     font-weight: 900;
     color: white;
     text-align: center;
+    white-space: nowrap;
 }
 
 /*  DNS como subtitulo separao visualmente */
 .dns {
     display: block;
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     font-weight: 900;
     color: white;
     text-align: center;

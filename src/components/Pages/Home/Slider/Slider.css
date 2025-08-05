@@ -2,6 +2,7 @@
 .mySwiper {
     width: 100%;
     height: 400px; /* Altura fija para que las transiciones sean uniformes */
+    margin-top: 50px;
 }
 
 /* Imagenes dentro del slider: siempre llenan el contenedor, sin deformarse */
