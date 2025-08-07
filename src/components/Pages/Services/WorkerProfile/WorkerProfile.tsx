@@ -64,4 +64,5 @@ const WorkerProfile: React.FC<Props> = ({ worker }) => {
     </div>
   );
 }
+
 export default WorkerProfile

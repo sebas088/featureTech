@@ -1,16 +1,23 @@
-import { Element } from "react-scroll";  // Componente que marca un "ancla" para scroll suave
+import { useState } from "react";
 import Form from "./Form/Form"; // Formulario de contacto
+import FloatingButton from "../../FloatingButton/FloatingButton";
 import './Contact.css';
 
 
 const Contact = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleForm = () => setIsOpen(!isOpen);
+
   return (
-    // Este "Element" permite que otros botones (NavButton) hagan scroll hasta aqui
-    <Element name="contact">
-      <div className="contactContainer">
+    <div>
+      <FloatingButton onClick={toggleForm} />
+
+      {/* Panel flotante */}
+      <div className={`contactPanel ${isOpen ? 'open' : ''}`}>
         <Form />
       </div>
-    </Element>
+    </div>
   )
 }
 

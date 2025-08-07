@@ -24,8 +24,8 @@ const Header: React.FC<HeaderProps> = ({ innerRef }) => {
     // La clase "scrolled" se usa para aplicar estilos distintos al hacer scroll
     <header ref={innerRef} className={scrolled ? "scrolled" : ""}>
       <nav className={`navContainer ${scrolled ? "navScrolled" : ""}`}>
+        
         <NavButton label="Home" to="home" />
-        <NavButton label="Services" to="services" />
 
         <div className="itemLogo">
           {/* Oculta el logo al hacer scroll con animacion suave */}
@@ -40,8 +40,8 @@ const Header: React.FC<HeaderProps> = ({ innerRef }) => {
           </h1>
         </div>
         
-        <NavButton label="Portfolio" to="portfolio" />
-        <NavButton label="Contact" to="contact" />
+        <NavButton label="Services" to="services" />      
+        
       </nav>
     </header>
   );

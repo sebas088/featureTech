@@ -5,7 +5,7 @@ header {
     left: 0;
     right: 0;
     height: 80px;
-    z-index: 1000;
+    z-index: 999;
     transition:  all 0.3s ease;
 
     /* Efecto de desenfoque de fondo (tipo glassmorphism) */
@@ -19,7 +19,7 @@ header {
 /* Grid principal del navbar con dos filas: una para el logo, otra para los botones */
 .navContainer {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px 130px; /* Fila alta para mostrar el logo */
     align-items: center;
     justify-content: center;
@@ -69,7 +69,7 @@ header {
 
 /* Zona central que contiene el logo o el nombre, centrado en el grid */
 .itemLogo {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1/3; /* Ocupa ambas filas */
     display: flex;
     justify-items: center;

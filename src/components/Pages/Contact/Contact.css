@@ -1,6 +1,22 @@
-/* Contenedor que centra el formulario de contacto en la seccion */
-.contactContainer {
-    display: grid;
-    place-items: center; /* Centra horizontal y verticalmente */
-    height: 300px; /* Altura fija para asegurar espacio visual suficiente */
+.contactPanel {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    width: 540px;
+    max-height: 70vh;
+    background: white;
+    border-radius: 12px;
+    box-shadow:  0 8px 30px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.4s ease-in-out;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.contactPanel.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
 }

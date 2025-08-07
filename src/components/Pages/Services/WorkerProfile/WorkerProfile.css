@@ -45,8 +45,8 @@
     flex-direction: column;
     justify-self: center;
     width: 400px;
-    background: white;
-    border-radius: 12px;
+    background: #ffffff;
+    border-radius: 16px;
     text-align: center;
     opacity: 0;
     transform: translateY(0);
@@ -61,7 +61,6 @@
     transform: translateY(0);
     max-height: 800px;
     padding: 1.5rem;
-    
 }
 
 
@@ -74,6 +73,7 @@
 
 .workerProfile a:hover {
     color: #28c2ca;
+    
 }
 
 
