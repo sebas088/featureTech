@@ -68,7 +68,7 @@ button[type="submit"] {
 
     margin: auto 0;
 
-    background-color: #3f83f8;
+    background-color: #28c2ca;
     color: white;
 
     padding: 0.75rem;
@@ -85,7 +85,7 @@ button[type="submit"] {
 
 /* Color mas oscuro en hover para indicar interactividad */
 button[type="submit"]:hover {
-    background-color: #3366cc;
+    background-color: #56d6dd;
 }
 
 /* Mensaje de exito despues de enviar el formulario */

@@ -10,6 +10,6 @@
     justify-content: center; /* Centra las tarjetas en cada fila */
     gap: 32px; /* Espaciado uniforme entre las tarjetas */
 
-    background-color: #f9f9f9; /* Fondo suave para diferenciar la seccion */
+    background-color: #d9f0f3; /* Fondo suave para diferenciar la seccion */
     overflow: hidden; /* Evita desbordes visuales si hay animaciones */
 }
