@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { CircleOut } from "./audio/CircleOut";
 
 // Update the URL as needed for your environment
-const URL = 'http://127.0.0.1:8000/voice/offer';
+const URL = 'https://feature-tech-backend-chatbot.onrender.com/voice/offer';
 
 type AgentState = 'Disconnected' | 'Connected' | 'Connecting';
 
