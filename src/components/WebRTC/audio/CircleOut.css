@@ -1,0 +1,12 @@
+.audio-visualizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.circle-visualizer {
+  border-radius: 50%;
+  background-color: #f9fafb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}

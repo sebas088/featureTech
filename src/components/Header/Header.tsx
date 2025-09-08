@@ -40,8 +40,7 @@ const Header: React.FC<HeaderProps> = ({ innerRef }) => {
           </h1>
         </div>
         
-        <NavButton label="Services" to="services" />      
-        
+        <NavButton label="Services" to="services" />
       </nav>
     </header>
   );

@@ -1,5 +1,6 @@
-// Importamos hooks y librerias necesatias
+// Importamos hooks y librerias necesarias
 import { useRef, useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import AOS from 'aos'; // Libreria de animaciones on-Scroll
 import 'aos/dist/aos.css';// Estilos AOS
 
@@ -9,6 +10,7 @@ import Home from './components/Pages/Home/Home';
 import Services from './components/Pages/Services/Services';
 import Portfolio from './components/Pages/Portfolio/Portfolio';
 import Contact from './components/Pages/Contact/Contact';
+import ChatButton from './components/ChatButton/ChatButton';
 
 import './App.css' // Estilos globales
 
@@ -58,13 +60,20 @@ function App() {
       {/* Header recibe la referencia para poder medirlo desde App */}
       <Header innerRef={headerRef}/>
 
-      {/* Naib ajusta su padding-top dinamicamente para no quedar tapado por el header.
+      {/* Main ajusta su padding-top dinamicamente para no quedar tapado por el header.
           Se suma 130px como compensacion visual extra por animaciones o contenido */}
       <main style={{ paddingTop: headerHeight + 130}}>
-        <Home />
-        <Services />
-        <Portfolio />
-        <Contact />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Home />
+              <Services />
+              <Portfolio />
+              <Contact />
+              <ChatButton />
+            </>
+          } />
+        </Routes>
       </main>
     </>
   )
