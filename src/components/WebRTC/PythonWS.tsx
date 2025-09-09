@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { CircleOut } from "./audio/CircleOut";
 
 // Update the URL as needed for your environment
-const URL = 'https://feature-tech-backend-chatbot.onrender.com/voice/offer';
+const URL = 'http://127.0.0.1:8000/voice/offer';
 
 type AgentState = 'Disconnected' | 'Connected' | 'Connecting';
 
@@ -22,8 +22,10 @@ export function PythonWS({ simplified = false }: PythonWSProps) {
         try {
             setAgentState('Connecting');
 
-            // Create RTCPeerConnection
-            pcRef.current = new RTCPeerConnection();
+            // Configuración con STUN server de Google
+            pcRef.current = new RTCPeerConnection({
+                iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
+            });
             
             // Add remote stream to video element
             pcRef.current.ontrack = (event) => {
