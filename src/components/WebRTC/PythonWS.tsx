@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { CircleOut } from "./audio/CircleOut";
 
 // Update the URL as needed for your environment
-const URL = 'satisfactory-myrah-ftdns-36621687.koyeb.app/voice/offer';
+const URL = 'https://satisfactory-myrah-ftdns-36621687.koyeb.app/voice/offer';
 
 type AgentState = 'Disconnected' | 'Connected' | 'Connecting';
 
